@@ -1,0 +1,18 @@
+{
+  "name": "wanderly-travel-guide",
+  "version": "1.0.0",
+  "description": "Wanderly - Travel Guide Website built with HTML5 and CSS3",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "travel",
+    "wanderly",
+    "html5",
+    "css3"
+  ],
+  "author": "Wanderly Team",
+  "license": "ISC"
+}

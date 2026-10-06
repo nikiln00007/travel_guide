@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wanderly - Discover inspiring destinations, luxury stays, local cuisine, and curated experiences around the world. Find places worth getting lost in.">
+    <title>Wanderly — Find places worth getting lost in</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="header-container container">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo" aria-label="Wanderly Homepage">
+                <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
+                <span class="logo-text">WANDERLY</span>
+            </a>
+
+            <!-- Mobile Menu Checkbox Toggle (Pure CSS Mobile Menu) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+            <label for="nav-toggle" class="hamburger-btn" aria-label="Open Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#discover" class="nav-link">Discover</a></li>
+                    <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                    <li><a href="#hotels" class="nav-link">Hotels</a></li>
+                    <li><a href="#restaurants" class="nav-link">Restaurants</a></li>
+                    <li><a href="#experiences" class="nav-link">Activities</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Right Actions -->
+            <div class="header-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="#signin" class="nav-signin">Sign In</a>
+                <a href="#plan" class="btn btn-outline-sm">Plan a Trip</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="discover">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content container">
+                <span class="tag-label hero-tag">YOUR NEXT ADVENTURE STARTS HERE</span>
+                <h1 class="hero-title">Go somewhere<br>you've never been.</h1>
+                <p class="hero-subtitle">
+                    Discover inspiring destinations, unforgettable stays, local food and experiences curated for curious travelers.
+                </p>
+
+                <!-- Search Panel -->
+                <div class="search-panel">
+                    <form class="search-form" action="#" method="GET" onsubmit="event.preventDefault();">
+                        <div class="search-field">
+                            <label for="search-destination"><i class="fa-solid fa-location-dot"></i> Destination</label>
+                            <input type="text" id="search-destination" placeholder="Where do you want to go?" required>
+                        </div>
+                        <div class="search-divider"></div>
+                        <div class="search-field">
+                            <label for="search-dates"><i class="fa-regular fa-calendar-days"></i> Travel dates</label>
+                            <input type="text" id="search-dates" placeholder="Choose dates" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </div>
+                        <div class="search-divider"></div>
+                        <div class="search-field">
+                            <label for="search-type"><i class="fa-solid fa-compass"></i> Travel type</label>
+                            <select id="search-type" class="search-select">
+                                <option value="" disabled selected>Select category</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="relaxation">Relaxation</option>
+                                <option value="food">Food & Culture</option>
+                                <option value="nature">Nature</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary search-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Explore
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Category Section -->
+        <section class="categories-section section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">What are you looking for?</h2>
+                </div>
+                <div class="categories-grid">
+                    <a href="#destinations" class="category-card">
+                        <div class="category-icon-wrapper">
+                            <span class="category-icon">🌍</span>
+                        </div>
+                        <h3 class="category-name">Destinations</h3>
+                        <p class="category-desc">Iconic cities, hidden beaches &amp; mountain escapes.</p>
+                    </a>
+                    <a href="#hotels" class="category-card">
+                        <div class="category-icon-wrapper">
+                            <span class="category-icon">🏨</span>
+                        </div>
+                        <h3 class="category-name">Hotels</h3>
+                        <p class="category-desc">Boutique resorts, cozy lodges &amp; luxury villas.</p>
+                    </a>
+                    <a href="#restaurants" class="category-card">
+                        <div class="category-icon-wrapper">
+                            <span class="category-icon">🍜</span>
+                        </div>
+                        <h3 class="category-name">Restaurants</h3>
+                        <p class="category-desc">Authentic street food to fine dining spots.</p>
+                    </a>
+                    <a href="#experiences" class="category-card">
+                        <div class="category-icon-wrapper">
+                            <span class="category-icon">🥾</span>
+                        </div>
+                        <h3 class="category-name">Activities</h3>
+                        <p class="category-desc">Guided treks, cultural tours &amp; sunset cruises.</p>
+                    </a>
+                    <a href="#inspiration" class="category-card">
+                        <div class="category-icon-wrapper">
+                            <span class="category-icon">✈️</span>
+                        </div>
+                        <h3 class="category-name">Travel Ideas</h3>
+                        <p class="category-desc">Curated itineraries for every type of wanderer.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations -->
+        <section class="destinations-section section-padding" id="destinations">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag-label">EXPLORE THE WORLD</span>
+                    <h2 class="section-title">Places that deserve a spot on your map</h2>
+                </div>
+                
+                <div class="destinations-grid">
+                    <!-- Featured Card (Large) -->
+                    <article class="destination-card card-featured">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80" alt="Kyoto, Japan - Traditional pagoda surrounded by autumn scenery" loading="lazy">
+                            <div class="card-badge">Featured Destination</div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> Asia · Japan</span>
+                            <h3 class="card-title">Kyoto, Japan</h3>
+                            <p class="card-desc">Ancient streets, peaceful temples and unforgettable food set against bamboo groves and historic shrines.</p>
+                            <a href="#explore-kyoto" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Destination 2 -->
+                    <article class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" alt="Santorini, Greece whitewashed buildings over the sea" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> Europe · Greece</span>
+                            <h3 class="card-title">Santorini, Greece</h3>
+                            <p class="card-desc">Whitewashed villages overlooking the Aegean Sea with iconic blue domes and cliffside sunsets.</p>
+                            <a href="#explore-santorini" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Destination 3 -->
+                    <article class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali, Indonesia tropical palm trees and temple gate" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> Asia · Indonesia</span>
+                            <h3 class="card-title">Bali, Indonesia</h3>
+                            <p class="card-desc">Temples, tropical landscapes and island adventures through emerald rice terraces and coastal breaks.</p>
+                            <a href="#explore-bali" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Destination 4 -->
+                    <article class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1609831144212-e564d6c29b71?auto=format&fit=crop&w=800&q=80" alt="Cappadocia, Turkiye hot air balloons" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> Middle East · Türkiye</span>
+                            <h3 class="card-title">Cappadocia, Türkiye</h3>
+                            <p class="card-desc">Fairytale valleys and unforgettable sunrise views surrounded by mystical rock formations and cave suites.</p>
+                            <a href="#explore-cappadocia" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Destination 5 -->
+                    <article class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Manali, India snow capped mountain peaks" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> South Asia · India</span>
+                            <h3 class="card-title">Manali, India</h3>
+                            <p class="card-desc">Mountain escapes, pine forests and Himalayan adventures with crisp alpine air and scenic trails.</p>
+                            <a href="#explore-manali" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Destination 6 -->
+                    <article class="destination-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai, UAE futuristic skyline" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-location"><i class="fa-solid fa-location-dot"></i> Middle East · UAE</span>
+                            <h3 class="card-title">Dubai, UAE</h3>
+                            <p class="card-desc">Modern architecture, desert adventures and endless experiences blending luxury with desert heritage.</p>
+                            <a href="#explore-dubai" class="card-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <section class="filter-section section-padding alt-bg">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Find your perfect stay</h2>
+                    <p class="section-subtitle">Filter stays by your travel preferences, budget, and desired experience.</p>
+                </div>
+
+                <div class="filter-bar">
+                    <form class="filter-form" action="#" method="GET" onsubmit="event.preventDefault();">
+                        <div class="filter-group">
+                            <label for="filter-search"><i class="fa-solid fa-magnifying-glass"></i> Destination</label>
+                            <input type="text" id="filter-search" placeholder="Search destination or hotel...">
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-price"><i class="fa-solid fa-indian-rupee-sign"></i> Price Range</label>
+                            <select id="filter-price" class="filter-select">
+                                <option value="all">All Prices</option>
+                                <option value="under5k">Under ₹5,000</option>
+                                <option value="5k-10k">₹5,000 - ₹10,000</option>
+                                <option value="above10k">₹10,000+</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-rating"><i class="fa-solid fa-star"></i> Minimum Rating</label>
+                            <select id="filter-rating" class="filter-select">
+                                <option value="any">Any Rating</option>
+                                <option value="4.5">★ 4.5 &amp; above</option>
+                                <option value="4.0">★ 4.0 &amp; above</option>
+                                <option value="3.5">★ 3.5 &amp; above</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-category"><i class="fa-solid fa-hotel"></i> Stay Category</label>
+                            <select id="filter-category" class="filter-select">
+                                <option value="all">All Stay Types</option>
+                                <option value="boutique">Boutique Hotel</option>
+                                <option value="resort">Luxury Resort</option>
+                                <option value="cottage">Alpine Cottage</option>
+                                <option value="villa">Beach Villa</option>
+                            </select>
+                        </div>
+                        <div class="filter-group btn-group">
+                            <button type="submit" class="btn btn-primary filter-btn">
+                                <i class="fa-solid fa-sliders"></i> Apply Filters
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Hotels -->
+        <section class="hotels-section section-padding" id="hotels">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag-label">STAY SOMEWHERE SPECIAL</span>
+                    <h2 class="section-title">Popular stays</h2>
+                </div>
+
+                <div class="hotels-grid">
+                    <!-- Hotel 1 -->
+                    <article class="hotel-card">
+                        <div class="hotel-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="The Fern House in Udaipur" loading="lazy">
+                            <span class="hotel-badge">Top Rated</span>
+                        </div>
+                        <div class="hotel-content">
+                            <div class="hotel-header-meta">
+                                <span class="hotel-location"><i class="fa-solid fa-location-dot"></i> Udaipur, India</span>
+                                <div class="hotel-rating">
+                                    <i class="fa-solid fa-star"></i> <span>4.8</span> <small>(128 reviews)</small>
+                                </div>
+                            </div>
+                            <h3 class="hotel-name">The Fern House</h3>
+                            <p class="hotel-desc">Serene lakeside boutique heritage stay with panoramic courtyard views and royal Mewari hospitality.</p>
+                            <div class="hotel-footer">
+                                <div class="hotel-price">
+                                    <span class="price-amount">₹8,500</span> <span class="price-unit">/ night</span>
+                                </div>
+                                <a href="#view-fern-house" class="btn btn-secondary-sm">View Stay</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Hotel 2 -->
+                    <article class="hotel-card">
+                        <div class="hotel-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Mosswood Retreat in Manali" loading="lazy">
+                        </div>
+                        <div class="hotel-content">
+                            <div class="hotel-header-meta">
+                                <span class="hotel-location"><i class="fa-solid fa-location-dot"></i> Manali, India</span>
+                                <div class="hotel-rating">
+                                    <i class="fa-solid fa-star"></i> <span>4.9</span> <small>(96 reviews)</small>
+                                </div>
+                            </div>
+                            <h3 class="hotel-name">Mosswood Retreat</h3>
+                            <p class="hotel-desc">Tucked in apple orchards and pine canopy, offering cedar wood suites and private cozy fireplaces.</p>
+                            <div class="hotel-footer">
+                                <div class="hotel-price">
+                                    <span class="price-amount">₹6,800</span> <span class="price-unit">/ night</span>
+                                </div>
+                                <a href="#view-mosswood" class="btn btn-secondary-sm">View Stay</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Hotel 3 -->
+                    <article class="hotel-card">
+                        <div class="hotel-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Casa Sol in Goa" loading="lazy">
+                            <span class="hotel-badge">Beachfront</span>
+                        </div>
+                        <div class="hotel-content">
+                            <div class="hotel-header-meta">
+                                <span class="hotel-location"><i class="fa-solid fa-location-dot"></i> Goa, India</span>
+                                <div class="hotel-rating">
+                                    <i class="fa-solid fa-star"></i> <span>4.7</span> <small>(210 reviews)</small>
+                                </div>
+                            </div>
+                            <h3 class="hotel-name">Casa Sol</h3>
+                            <p class="hotel-desc">Sun-drenched Portuguese style villa steps from quiet sands with an infinity pool and private garden.</p>
+                            <div class="hotel-footer">
+                                <div class="hotel-price">
+                                    <span class="price-amount">₹9,200</span> <span class="price-unit">/ night</span>
+                                </div>
+                                <a href="#view-casa-sol" class="btn btn-secondary-sm">View Stay</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Hotel 4 -->
+                    <article class="hotel-card">
+                        <div class="hotel-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Azure Bay Resort in Bali" loading="lazy">
+                        </div>
+                        <div class="hotel-content">
+                            <div class="hotel-header-meta">
+                                <span class="hotel-location"><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</span>
+                                <div class="hotel-rating">
+                                    <i class="fa-solid fa-star"></i> <span>4.95</span> <small>(340 reviews)</small>
+                                </div>
+                            </div>
+                            <h3 class="hotel-name">Azure Bay Resort</h3>
+                            <p class="hotel-desc">Cliffside luxury resort featuring private bamboo villas, spa wellness sanctuaries, and ocean vistas.</p>
+                            <div class="hotel-footer">
+                                <div class="hotel-price">
+                                    <span class="price-amount">₹14,500</span> <span class="price-unit">/ night</span>
+                                </div>
+                                <a href="#view-azure-bay" class="btn btn-secondary-sm">View Stay</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top-Rated Restaurants -->
+        <section class="restaurants-section section-padding alt-bg" id="restaurants">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag-label">LOCAL CULINARY SCENE</span>
+                    <h2 class="section-title">Eat like a local</h2>
+                    <p class="section-subtitle">Discover restaurants worth travelling for, curated by local food writers.</p>
+                </div>
+
+                <div class="restaurants-grid">
+                    <!-- Restaurant 1 -->
+                    <article class="restaurant-card">
+                        <div class="restaurant-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Ember & Spice dish presentation" loading="lazy">
+                            <span class="price-indicator">₹₹₹</span>
+                        </div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-meta">
+                                <span class="restaurant-city"><i class="fa-solid fa-city"></i> Mumbai</span>
+                                <span class="restaurant-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <h3 class="restaurant-name">Ember &amp; Spice</h3>
+                            <span class="restaurant-cuisine">Modern Indian Culinary Art</span>
+                            <p class="restaurant-desc">Progressive Indian cuisine reimagining traditional charcoal flavors with contemporary techniques.</p>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 2 -->
+                    <article class="restaurant-card">
+                        <div class="restaurant-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Little Kyoto Japanese cuisine" loading="lazy">
+                            <span class="price-indicator">₹₹</span>
+                        </div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-meta">
+                                <span class="restaurant-city"><i class="fa-solid fa-city"></i> Bengaluru</span>
+                                <span class="restaurant-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <h3 class="restaurant-name">Little Kyoto</h3>
+                            <span class="restaurant-cuisine">Japanese Izakaya &amp; Ramen</span>
+                            <p class="restaurant-desc">Intimate izakaya serving hand-rolled sushi, slow-simmered tonkotsu ramen, and robata skewers.</p>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 3 -->
+                    <article class="restaurant-card">
+                        <div class="restaurant-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80" alt="Coast & Curry seafood dish" loading="lazy">
+                            <span class="price-indicator">₹₹₹</span>
+                        </div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-meta">
+                                <span class="restaurant-city"><i class="fa-solid fa-city"></i> Goa</span>
+                                <span class="restaurant-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <h3 class="restaurant-name">Coast &amp; Curry</h3>
+                            <span class="restaurant-cuisine">Coastal Seafood</span>
+                            <p class="restaurant-desc">Fresh morning catch infused with kokum, coconut and fiery Goan spices right along the shoreline.</p>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 4 -->
+                    <article class="restaurant-card">
+                        <div class="restaurant-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="The Green Table fresh salad plate" loading="lazy">
+                            <span class="price-indicator">₹₹</span>
+                        </div>
+                        <div class="restaurant-content">
+                            <div class="restaurant-meta">
+                                <span class="restaurant-city"><i class="fa-solid fa-city"></i> Pune</span>
+                                <span class="restaurant-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <h3 class="restaurant-name">The Green Table</h3>
+                            <span class="restaurant-cuisine">Contemporary Farm-to-Table</span>
+                            <p class="restaurant-desc">Organic seasonal harvests crafted into vibrant, wholesome plant-forward dishes and artisanal beverages.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Experiences -->
+        <section class="experiences-section section-padding" id="experiences">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag-label">CURATED ADVENTURES</span>
+                    <h2 class="section-title">Do more than visit. Experience it.</h2>
+                </div>
+
+                <div class="experiences-grid">
+                    <!-- Experience 1 (Featured / Tall Card) -->
+                    <article class="experience-card card-tall">
+                        <div class="experience-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Himalayan Sunrise Trek in Manali" loading="lazy">
+                            <span class="duration-tag"><i class="fa-regular fa-clock"></i> 3 Days / 2 Nights</span>
+                        </div>
+                        <div class="experience-content">
+                            <span class="experience-location"><i class="fa-solid fa-location-dot"></i> Manali, Himachal Pradesh</span>
+                            <h3 class="experience-title">Himalayan Sunrise Trek</h3>
+                            <p class="experience-desc">Hike through pristine pine forests and alpine meadows to catch breathtaking dawn golden light over snow-capped ridges.</p>
+                            <a href="#experience-trek" class="experience-link">Discover experience <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Experience 2 -->
+                    <article class="experience-card">
+                        <div class="experience-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Street Food After Dark in Delhi" loading="lazy">
+                            <span class="duration-tag"><i class="fa-regular fa-clock"></i> 4 Hours Evening</span>
+                        </div>
+                        <div class="experience-content">
+                            <span class="experience-location"><i class="fa-solid fa-location-dot"></i> Old Delhi, India</span>
+                            <h3 class="experience-title">Street Food After Dark</h3>
+                            <p class="experience-desc">Navigate historic alleys with a expert culinary historian sampling legendary paranthas, kebabs, and century-old sweets.</p>
+                            <a href="#experience-food" class="experience-link">Discover experience <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Experience 3 -->
+                    <article class="experience-card">
+                        <div class="experience-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Sunset Sailing in Goa" loading="lazy">
+                            <span class="duration-tag"><i class="fa-regular fa-clock"></i> Half Day Cruise</span>
+                        </div>
+                        <div class="experience-content">
+                            <span class="experience-location"><i class="fa-solid fa-location-dot"></i> Goa Coastline</span>
+                            <h3 class="experience-title">Sunset Sailing</h3>
+                            <p class="experience-desc">Charter a private catamaran across golden Arabian Sea waves with chilled drinks, local tapas, and live acoustic acoustics.</p>
+                            <a href="#experience-sailing" class="experience-link">Discover experience <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Inspiration Banner -->
+        <section class="banner-section" id="inspiration">
+            <div class="banner-bg">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80" alt="Mountain reflection lake scenic travel banner" loading="lazy">
+                <div class="banner-overlay"></div>
+            </div>
+            <div class="banner-content container">
+                <h2 class="banner-title">Not sure where to go next?</h2>
+                <p class="banner-text">Let your curiosity choose the destination.</p>
+                <a href="#get-inspired" class="btn btn-accent btn-lg">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Get Inspired
+                </a>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section class="tips-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag-label">EDITORIAL JOURNAL</span>
+                    <h2 class="section-title">Travel smarter</h2>
+                </div>
+
+                <div class="tips-grid">
+                    <!-- Tip Article 1 -->
+                    <article class="tip-card">
+                        <div class="tip-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="Solo traveler looking at map" loading="lazy">
+                            <span class="tip-category">Solo Travel</span>
+                        </div>
+                        <div class="tip-content">
+                            <h3 class="tip-title">7 things to know before your first solo trip</h3>
+                            <p class="tip-excerpt">Essential mindset shifts, safety habits, and key planning steps to turn solo exploration into a life-changing journey.</p>
+                            <a href="#article-1" class="tip-link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Tip Article 2 -->
+                    <article class="tip-card">
+                        <div class="tip-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Scenic road trip car in valley" loading="lazy">
+                            <span class="tip-category">Trip Planning</span>
+                        </div>
+                        <div class="tip-content">
+                            <h3 class="tip-title">How to plan a weekend getaway</h3>
+                            <p class="tip-excerpt">Maximalize short breaks without stress: micro-itinerary design, choosing 3-hour radius destinations, and quick packing tricks.</p>
+                            <a href="#article-2" class="tip-link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Tip Article 3 -->
+                    <article class="tip-card">
+                        <div class="tip-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1553531384-397c80973a0b?auto=format&fit=crop&w=800&q=80" alt="Minimalist luggage packing" loading="lazy">
+                            <span class="tip-category">Packing &amp; Gear</span>
+                        </div>
+                        <div class="tip-content">
+                            <h3 class="tip-title">The art of travelling light</h3>
+                            <p class="tip-excerpt">Mastering the carry-on life: capsule wardrobes, essential travel tech, and leaving room for spontaneous discoveries.</p>
+                            <a href="#article-3" class="tip-link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section section-padding alt-bg">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-icon">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <h2 class="newsletter-title">Get the good places before everyone else.</h2>
+                    <p class="newsletter-text">Monthly destination inspiration, hidden gems and travel tips — straight to your inbox.</p>
+
+                    <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for newsletter">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="newsletter-privacy"><i class="fa-solid fa-lock"></i> No spam. Just places worth knowing about.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="brand-logo footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="logo-text">WANDERLY</span>
+                    </a>
+                    <p class="footer-tagline">Find places worth getting lost in.</p>
+                    <p class="footer-brand-desc">Curating authentic global travel stories, exceptional boutique stays, and unforgettable culinary experiences.</p>
+                </div>
+
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="#destinations">Destinations</a></li>
+                            <li><a href="#hotels">Hotels</a></li>
+                            <li><a href="#restaurants">Restaurants</a></li>
+                            <li><a href="#experiences">Activities</a></li>
+                            <li><a href="#tips">Travel Guides</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#privacy">Privacy</a></li>
+                            <li><a href="#terms">Terms</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Follow</h4>
+                        <ul class="footer-links social-links">
+                            <li><a href="#instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#youtube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                            <li><a href="#pinterest"><i class="fa-brands fa-pinterest"></i> Pinterest</a></li>
+                            <li><a href="#facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Wanderly. Made for curious travelers.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
